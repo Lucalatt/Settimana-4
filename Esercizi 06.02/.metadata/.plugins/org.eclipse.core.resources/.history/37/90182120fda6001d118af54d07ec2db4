@@ -1,0 +1,14 @@
+package it.lucal.es2.beans;
+
+import java.time.LocalDate;
+
+public class Ordine {
+
+	private int numOrdine;
+	private StatoOrdine stato;
+	private int coperti;
+	private LocalDate oraOrd;
+	private double totale;
+	private Tavolo tavolo;
+
+}

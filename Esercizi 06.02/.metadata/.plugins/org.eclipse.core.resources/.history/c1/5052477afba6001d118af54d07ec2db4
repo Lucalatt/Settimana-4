@@ -1,0 +1,9 @@
+package it.lucal.es2.beans;
+
+public class Ordine {
+	private int numero;
+	private int coperti;
+	private int ora;
+	private int totale;
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\lucal\Desktop\W4L2"/>
+			<item value="C:\Users\lucal\Desktop\w5-d1-BE-main"/>
+			<item value="C:\Users\lucal\Desktop\Esericizi_06_02"/>
+			<item value="C:\Users\lucal\Desktop\week-4-Esercizi-1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

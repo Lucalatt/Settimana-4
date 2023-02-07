@@ -1,0 +1,77 @@
+package it.lucal.es2;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import it.lucal.es2.beans.Bevanda;
+import it.lucal.es2.beans.Franchising;
+import it.lucal.es2.beans.Pizza;
+import it.lucal.es2.beans.Topping;
+import it.lucal.es2.decorator.AnanasDecorator;
+import it.lucal.es2.decorator.MozzarellaDecorator;
+import it.lucal.es2.decorator.PomodoroDecorator;
+import it.lucal.es2.decorator.ProsciuttoDecorator;
+import it.lucal.es2.decorator.SalameDecorator;
+
+@SpringBootApplication
+public class Es020602Application {
+	AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+
+	public static void main(String[] args) {
+		SpringApplication.run(Es020602Application.class, args);
+		pizzeria();
+
+	}
+
+	public static void pizzeria() {
+
+		ctx.scan("it.lucal.es2.beans");
+		ctx.refresh();
+
+		Pizza p1 = (Pizza) ctx.getBean(Pizza.class);
+		Topping pMargherita = new PomodoroDecorator(new MozzarellaDecorator(p1));
+		Topping pProsciutto = new PomodoroDecorator(new MozzarellaDecorator(new ProsciuttoDecorator(p1)));
+		Topping pAnanas = new PomodoroDecorator(
+				new MozzarellaDecorator(new ProsciuttoDecorator(new AnanasDecorator(p1))));
+		Topping pSalameProsciutto = new PomodoroDecorator(
+				new MozzarellaDecorator(new ProsciuttoDecorator(new SalameDecorator(p1))));
+		Topping pSalame = new PomodoroDecorator(new MozzarellaDecorator(new SalameDecorator(p1)));
+
+		Bevanda b1 = new Bevanda(1.29, "Limonata(0,33cl)", 128);
+		Bevanda b2 = new Bevanda(1.29, "Acqua(0.5l)", 0);
+		Bevanda b3 = new Bevanda(7.49, "Vino(0,75l, 13%)", 607);
+
+		Franchising f1 = new Franchising("Maglia", 21.99);
+		Franchising f2 = new Franchising("Tazza", 4.99);
+
+		System.out.println("Benvenuti in Godfather's Pizza!");
+		System.out.println("-------------------------------");
+		System.out.println("---------PIZZE---------");
+		System.out.println("Pizza Margherita " + "(" + pMargherita.getNome() + ")" + " | PREZZO: €"
+				+ pMargherita.getPrezzo() + " | CALORIE: " + pMargherita.getCalorie());
+		System.out.println("Pizza Prosciutto " + "(" + pProsciutto.getNome() + ")" + " | PREZZO: €"
+				+ pProsciutto.getPrezzo() + " | CALORIE: " + pProsciutto.getCalorie());
+		System.out.println("Pizza Hawaii " + "(" + pAnanas.getNome() + ")" + " | PREZZO: €" + pAnanas.getPrezzo()
+				+ " | CALORIE: " + pAnanas.getCalorie());
+		System.out.println("Pizza Salame " + "(" + pSalame.getNome() + ")" + " | PREZZO: €" + pSalame.getPrezzo()
+				+ " | CALORIE: " + pSalame.getCalorie());
+		System.out.println("Pizza Salame e prosciutto " + "(" + pSalameProsciutto.getNome() + ")" + " | PREZZO: €"
+				+ pSalameProsciutto.getPrezzo() + " | CALORIE: " + pSalameProsciutto.getCalorie());
+		System.out.println("---------INGREDIENTI AGGIUNTIVI---------");
+		System.out.println();
+		System.out.println("---------BEVANDE---------");
+		System.out.println(b1);
+		System.out.println(b2);
+		System.out.println(b3);
+		System.out.println("---------FRANCHISING---------");
+		System.out.println(f1);
+		System.out.println(f2);
+
+		Tavolo tavolo1 = (tavolo) ctx.getBean("tavolo", 1);
+
+		ctx.close();
+
+	}
+
+}

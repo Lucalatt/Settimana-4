@@ -1,0 +1,30 @@
+package it.lucal.es2.beans;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public class Ordine {
+	
+	private int numOrdine;
+	private StatoOrdine statoO;
+	private int coperti;
+	private LocalDate oraOrd;
+	private double totale;
+	private Tavolo tavolo;
+	List<Prodotto> lista;
+	Prodotto prodotto;
+	
+	public Ordine(int numOrdine, StatoOrdine stato, int coperti, LocalDate oraOrd, double totale, Tavolo tavolo,
+			List<Prodotto> lista, Prodotto prodotto) {
+		
+		this.numOrdine = numOrdine;
+		this.stato = stato;
+		this.coperti = coperti;
+		this.oraOrd = oraOrd;
+		this.totale = totale;
+		this.tavolo = tavolo;
+		this.lista = lista;
+		this.prodotto = prodotto;
+	}
+
+}

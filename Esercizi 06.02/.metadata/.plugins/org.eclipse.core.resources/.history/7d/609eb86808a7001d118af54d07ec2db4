@@ -1,0 +1,13 @@
+package it.lucal.es2.beans;
+
+public class Tavolo {
+	private int num;
+	private int maxNum;
+	private StatoTavolo statoT;
+	public Tavolo(int num, int maxNum, StatoTavolo statoT) {
+		this.num = num;
+		this.maxNum = maxNum;
+		this.statoT = statoT;
+	}
+
+}

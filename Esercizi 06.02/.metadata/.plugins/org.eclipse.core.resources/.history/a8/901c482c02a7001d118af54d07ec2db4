@@ -1,0 +1,8 @@
+package it.lucal.es2.beans;
+
+public class Tavolo {
+	private int num;
+	private int maxNum;
+	private StatoTavolo stato;
+
+}

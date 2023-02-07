@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="lombok.ToString"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.beans.Pizza"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.beans.Topping"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.decorators.Pomodoro"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.decorators.Mozzarella"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.decorators.Prosciutto"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.decorators.Ananas"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.decorators.Salame"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.beans.Bevanda"/>
+    <fullyQualifiedTypeName name="it.epicode.esercizi06_02.es2.beans.Franchise"/>
+    <fullyQualifiedTypeName name="it.gaetanoquarto.esercizio2.beans.Topping"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.Pizza"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.Topping"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.decorator.PomodoroDecorator"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.decorator.MozzarellaDecorator"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.decorator.ProsciuttoDecorator"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.decorator.AnanasDecorator"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.decorator.SalameDecorator"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.Bevanda"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.Franchising"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.Tavolo"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.Prodotto"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.Ordine"/>
+    <fullyQualifiedTypeName name="it.lucal.es2.beans.StatoOrdine"/>
+</qualifiedTypeNameHistroy>
