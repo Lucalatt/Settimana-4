@@ -2,9 +2,11 @@ package it.lucal.es2.decorator;
 
 import it.lucal.es2.beans.Pizza;
 import it.lucal.es2.beans.Topping;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @ToString
+@NoArgsConstructor
 public class MozzarellaDecorator extends Topping {
 
 	public MozzarellaDecorator(Pizza pizza) {

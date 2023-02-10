@@ -40,6 +40,5 @@ public class PomodoroDecorator extends Topping{
 	@Override
 	public int getCalorie() {
 		return pizza.getCalorie() + calorie;
-	}
-
+	}	
 }

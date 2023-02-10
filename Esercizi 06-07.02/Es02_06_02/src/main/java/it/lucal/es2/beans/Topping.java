@@ -13,7 +13,7 @@ import lombok.ToString;
 @Setter
 @Component
 @Scope("prototype")
-public abstract class Topping extends Pizza{
+public abstract class Topping extends Pizza {
 
 	protected Pizza pizza;
 	protected String nomeTopping;
@@ -28,11 +28,9 @@ public abstract class Topping extends Pizza{
 	public String toString() {
 		return getNome() + "prezzo: " + getPrezzo() + " calorie: " + getCalorie();
 	}
-
 	
-	
-	
-
-
+	public double getPrezzoT() {
+		return prezzo;
+	}
 
 }

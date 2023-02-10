@@ -3,6 +3,8 @@ package it.lucal.es2.beans;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +16,7 @@ import lombok.ToString;
 @Setter
 @Component
 @Scope("prototype")
+@PropertySource("classpath:application.properties")
 public class Ordine {
 
 	Tavolo tavolo;
@@ -25,6 +28,9 @@ public class Ordine {
 	List<Prodotto> lista;
 	Prodotto prodotto;
 	Ordine ordine;
+	//@Value("#{new Integer('${ordine.coperto}')}")
+	//@Value("{${es020602application.coperto}")
+	//private int costoC;
 
 	public Ordine(Tavolo tavolo, int nOrdine, StatoOrdine statoOrdine, int nCoperti, int oraOrdine,
 			List<Prodotto> lista) {
@@ -40,6 +46,7 @@ public class Ordine {
 		for (int i = 0; i < lista.size(); i++) {
 			importoTotale += lista.get(i).prezzo;
 		}
+		
 		importoTotale = importoTotale + (nCoperti * 2);
 	}
 

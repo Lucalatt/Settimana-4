@@ -38,4 +38,5 @@ public class AnanasDecorator extends Topping {
 	public int getCalorie() {
 		return pizza.getCalorie() + calorie;
 	}
+	
 }
